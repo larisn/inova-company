@@ -1,0 +1,199 @@
+
+#s-services {
+  background: url(/assets/img/bg-secondary.png) no-repeat center / cover;
+  height: 100%;
+  padding-bottom: 10rem;
+  @include responsive-tablet {
+    height: 100%;
+  }
+  @include responsive-mobile() {
+    padding-bottom: 4rem;
+    height: 100%;
+  }
+  @include responsive-desktop2() {
+    height: 100%;
+  }
+  .container {
+    @include container();
+    a {
+      color: $dark-title;
+      cursor: pointer;
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+      font: 500 1.6rem $font-secondary;
+      background-color: $yellow;
+      border-radius: 3px 10px 3px 10px;
+      transition: ease-out 0.3s;
+      border: 1px solid $yellow;
+      padding: 1.3rem 2rem;
+      margin-top: 10rem;
+      text-align: center;
+      &:hover {
+        color: $light-title;
+        border: 1px solid $yellow;
+        background-color: transparent;
+        
+      }
+    }
+    @include responsive-tablet() {
+      padding: 8rem 4rem 0 4rem;
+    }
+    @include responsive-mobile() {
+      padding: 8rem 2.5rem 8rem 2.5rem;
+    }
+    @include responsive-desktop() {
+      padding: 12rem 4rem 0 4rem;
+    }
+  }
+}
+
+.content-title-services {
+  b {
+    color: $yellow;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  h1 {
+    color: $light-title;
+    font: 600 4.5rem $font-main;
+    letter-spacing: .5px;
+    margin-bottom: 1.5rem;
+    margin: 1rem 0 1.5rem 0;
+    span {
+      color: $yellow;
+      font: 800 4.5rem $font-main;
+      position: relative;
+      @include responsive-mobile() {
+        font-size: 4rem;
+      }
+    }
+  }
+  p {
+    color: $light-p;
+    font: 400 1.7rem $font-secondary;
+    line-height: 32px;
+    margin-bottom: 8rem;
+    max-width: 650px;
+    @include responsive-mobile() {
+      font-size: 1.6rem;
+      line-height: 32px;
+    }
+  }
+}
+
+.container-services-cards {
+  @include align-center();
+  gap: 35px;
+  @include responsive-tablet() {
+    flex-wrap: wrap;
+  }
+  article {
+    border: 1px solid $light-border;
+    padding: 0 3rem;
+    width: 100%;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    border-radius: 7px;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    @include responsive-desktop() {
+      width: 700px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 3px;
+      height: 100%;
+      background-color: $yellow;
+      z-index: 0;
+      transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+    h2 {
+      font: 500 2.2rem $font-main;
+      color: $light-title;
+      margin: 2rem 0;
+      letter-spacing: .1px;
+    }
+    p {
+      color: $light-p;
+      font: 300 1.65rem $font-secondary;
+      line-height: 32px;
+      margin-bottom: 2rem;
+      max-width: 650px;
+      @include responsive-mobile() {
+        font-size: 1.6rem;
+        line-height: 32px;
+      }
+    }
+    button {
+      background-color: transparent;
+      color: $yellow;
+      position: relative;
+      margin-top: .5rem;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 95%;
+        height: 2px;
+        bottom: -8px;
+        left: 2px;
+        background-color: $yellow;
+      }
+      &:hover {
+        color: $light-title;
+        transition: all .3s;
+        &::before {
+          position: static;
+        }
+      }
+    }
+  }
+}
+
+.p-services {
+  display: none;
+}
+
+.card1 {
+  img {
+    padding-top: 3rem;
+    width: 50px;
+  }
+}
+
+.card2 {
+  img {
+    padding-top: 2rem;
+    width: 75px;
+    transform: translateX(-10px);
+  }
+  h2 {
+    transform: translateY(-11px);
+  }
+  p {
+    transform: translateY(-12px);
+  }
+  button {
+    transform: translateY(-13px);
+    @include responsive-mobile() {
+      padding-top: 2.5rem;
+    }
+    @include responsive-desktop2() {
+      padding-top: 2.5rem;
+    }
+  }
+}
+
+.card3 {
+  img {
+    padding-top: 3rem;
+    width: 45px;
+  }
+  button {
+    transform: translateY(3px);
+  }
+}

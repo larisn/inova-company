@@ -1,0 +1,131 @@
+
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+  padding: 1.8rem 2.2rem;
+  .container {
+    nav {
+      @include container();
+      @include flexbox-between();
+      .nav-list {
+        display: flex;
+        gap: 25px;
+        li {
+          a {
+            color: $light-title;
+            position: relative;
+            font-size: 1.7rem;
+            font-weight: 300;
+            transition: all .3s ease-in-out;
+            &:hover {
+              color: $yellow;
+            }
+            &::before {
+              background-color: $yellow;
+            }
+          }
+        }
+        @include responsive-desktop() {
+          gap: 40px;
+        }
+      }
+      @include responsive-desktop() {
+        align-items: center;
+      }
+    }
+  }
+}
+
+.brand-mobile {
+  width: 60px;
+  margin-top: -0.95rem;
+  @include responsive-desktop {
+    display: none;
+  }
+}
+
+.brand {
+  display: none;
+  width: 195px;
+  @include responsive-desktop() {
+    display: block;
+  }
+}
+
+.nav-mobile {
+  display: none;
+  div {
+    transition-duration: 0.5s;
+    margin: 6px 0;
+    width: 28px;
+    height: 2px;
+    background-color: $light-title;
+    transition: .4s;
+  }
+  &.active .line1 {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+  &.active .line2 {
+    opacity: 0;
+  }
+  &.active .line3 {
+    transform: rotate(-46deg) translate(3px, -4px);
+  }
+}
+
+.nav-list.visible {
+  display: flex;
+  flex-direction: column;
+  visibility: visible;
+}
+
+@include responsive-tablet() {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    text-align: center;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: $dark-title;
+    flex-direction: column;
+    padding-top: 40px;
+    visibility: hidden;
+    li {
+      margin-bottom: 1rem;
+    }
+  }
+  .nav-mobile {
+    display: block;
+  }
+}
+
+.solid-nav {
+  background-color: $dark-title;
+  z-index: 999;
+}
+
+.contact-nav {
+  color: $dark-title;
+  cursor: pointer;
+  font-family: $font-secondary;
+  background-color: $yellow;
+  border-radius: 3px 10px 3px 10px;
+  padding: 1.3rem 2.3rem;
+  transition: ease-out 0.3s;
+  text-align: center;
+  &::before {
+    position: static;
+  }
+  &:hover {
+    color: $light-title;
+    background-color: $light-title2;
+  }
+}

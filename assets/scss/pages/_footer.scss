@@ -1,0 +1,59 @@
+
+#s-footer {
+  background-color: $dark-title;
+  .container {
+    @include container();
+    padding-top: 1.5rem;
+    padding: 1.5rem 4rem 2.5rem 4rem;
+  }
+}
+
+.content-footer-links {
+  @include flexbox-between();
+  ul {
+    display: flex;
+    gap: 35px;
+    li {
+      a {
+        color: $light-title;
+        position: relative;
+        font-size: 1.6rem;
+        font-weight: 300;
+        transition: all .3s ease-in-out;
+        &:hover {
+          color: $yellow;
+        }
+        &::before {
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+  img {
+    width: 220px;
+  }
+}
+
+.content-footer-infos {
+  @include flexbox-between();
+  padding-top: 3rem;
+  p {
+    color: $light-title2;
+    font: 300 1.3rem $font-secondary;
+  }
+  div {
+    @include align-center();
+    gap: 15px;
+    img {
+      width: 20px;
+      cursor: pointer;
+      &:first-child {
+        margin-left: 3rem;
+      }
+    }
+  }
+}
+
+.line-footer {
+  border-color: $yellow;
+}

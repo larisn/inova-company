@@ -1,0 +1,260 @@
+
+#s-plans {
+  padding-bottom: 10rem;
+  .container {
+    @include container();
+    padding: 8rem 0 4rem 0;
+    @include responsive-tablet() {
+      padding: 8rem 4rem 3rem 4rem;
+    }
+    @include responsive-mobile() {
+      padding: 8rem 2.5rem 2rem 2.5rem;
+    }
+  }
+}
+
+.content-title-plans {
+  b {
+    color: $yellow;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  h1 {
+    color: $dark-title;
+    font: 700 4.5rem $font-main;
+    line-height: 70px;
+    max-width: 550px;
+    margin-bottom: 1.5rem;
+    span {
+      color: $yellow;
+      font: 800 4.5rem $font-main;
+      position: relative;
+      @include responsive-mobile() {
+        font-size: 4rem;
+      }
+    }
+  }
+  p {
+    color: $dark-description;
+    font: 500 1.8rem $font-secondary;
+    line-height: 32px;
+    margin-bottom: 5rem;
+    max-width: 600px;
+    @include responsive-mobile() {
+      font-size: 1.6rem;
+      line-height: 32px;
+    }
+  }
+}
+
+.container-card-plans {
+  @include flexbox-center();
+  align-items: baseline;
+  justify-content: start;
+  padding: 0rem 4rem 8rem 4rem;
+  @include container();
+  gap: 70px;
+  @include responsive-tablet() {
+    flex-wrap: wrap;
+  }
+  @include responsive-mobile() {
+    padding: 0 2.5rem 6rem 2.5rem;
+  }
+  @include responsive-desktop() {
+    gap: 125px;
+    justify-content: center;
+  }
+}
+
+.plans {
+  position: relative;
+  border: 1px solid $dark-border;
+  border-radius: 6px;
+  padding: 24px;
+  width: 100%;
+  @include responsive-desktop() {
+    width: 330px;
+    height: 600px;
+    padding: 2rem;
+    text-align: center;
+  }
+  img {
+    width: 60px;
+    margin: 0 0 1.5rem 1rem;
+    transform: translateX(-10px);
+    @include responsive-desktop() {
+      width: 65px;
+      margin: 3rem auto 2.5rem auto;
+    }
+  }
+  h2 {
+    @include align-center();
+    font: 500 3rem $font-main;
+    img {
+      width: 30px;
+      margin: 0 0 0 20px;
+    }
+    b {
+      margin-right: 8px;
+      font: 700 3rem $font-main;
+    }
+    @include responsive-desktop() {
+      @include flexbox-center();
+      margin-left: 10px;
+    }
+  }
+  h3 {
+    color: $dark-title;
+    font: 800 4rem 'Jost';
+    margin: 1rem 0 1.5rem 0;
+    transform: translateX(-10px);
+    &::after {
+      content: "";
+      background-color: $dark-border;
+      width: 200px;
+      height: 1px;
+      display: flex;
+      position: relative;
+      transform: translateX(-50%);
+      margin: 3rem 0 4rem 0;
+      @include responsive-tablet() {
+        left: 15.8%;
+      }
+      @include responsive-mobile() {
+        left: 38.3%;
+      }
+      @include responsive-desktop() {
+        width: 170px;
+        left: 55%;
+      }
+    }
+    span {
+      color: $dark-title;
+      font: 600 1.8rem 'Jost';
+      position: relative;
+      bottom: 20px;
+      right: -8px;
+      transform: translateY(50px);
+    }
+    @include responsive-desktop() {
+      margin-top: 2rem 0 3rem 0;
+      transform: translateX(-15px);
+    }
+  }
+  p {
+    color: $dark-p2;
+    font: 500 1.4rem $font-secondary;
+    line-height: 26px;
+  }
+  p:nth-child(2) {
+    margin-top: 2rem;
+    margin: 3rem 0 0rem 0;
+  }
+  p:nth-child(3) {
+    font-weight: 600;
+    margin-top: .4rem;
+  }
+  a {
+    display: block;
+    margin-top: 3rem;
+    width: 100%;
+    background-color: $dark-title;
+    color: $light-title;
+    padding: 10px;
+    border-radius: 3px 10px 3px 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: all .6s;
+    &:hover {
+      color: $dark-title;
+      background: $yellow;
+    }
+    @include responsive-desktop() {
+      margin-top: 12rem;
+    }
+  }
+}
+
+.gold-plan {
+  border: 1px solid #000;
+  height: 618px;
+  @include responsive-desktop() {
+    height: 600px;
+  }
+  .content-gold-plan {
+    margin-top: 11rem;
+    @include responsive-desktop() {
+      margin-top: 0;
+    }
+  }
+  a {
+    @include responsive-desktop() {
+      margin-top: 9rem;
+    }
+  }
+}
+
+.flag {
+  @include flexbox-center();
+  position: absolute;
+  overflow: hidden;
+  width: 190px;
+  height: 190px;
+  top: -12px;
+  left: -5px;
+  transform: rotateZ(4deg);
+  &::before {
+    @include flexbox-center();
+    content: "Mais Popular";
+    padding-left: 20px;
+    position: absolute;
+    width: 150%;
+    height: 30px;
+    background-color: $dark-title;
+    transform: rotate(-40deg) translateY(-25px);
+    color: $light-title;
+    font: 600 1.35rem $font-main;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    bottom: 27px;
+    left: 0;
+    height: 10px;
+    z-index: 1;
+    box-shadow: 183px -158px #000;
+    background-color: #000;
+  }
+}
+
+.design-consultancy {
+  h4 {
+    text-align: center;
+    font: 500 1.8rem $font-secondary;
+    color: $dark-title;
+    line-height: 30px;
+  }
+  a {
+    display: block;
+    margin-top: 3rem;
+    background-color: $yellow;
+    color: $dark-title;
+    width: 250px;
+    margin: 3rem auto 0 auto;
+    padding: 10px;
+    border-radius: 3px 8px 3px 8px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: all .6s;
+    &:hover {
+      color: $light-title;
+      background: $dark-title;
+    }
+  }
+}

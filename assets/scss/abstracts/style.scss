@@ -1,0 +1,59 @@
+
+@import "../abstracts/variables",
+"../abstracts/mixins",
+"../abstracts/reset",
+"../pages/nav",
+"../pages/home",
+"../pages/why-inova",
+"../pages/services",
+"../pages/plans",
+"../pages/faq",
+"../pages/contact",
+"../pages/work-with-us",
+"../pages/portfolio",
+"../pages/team",
+"../pages/sent-message",
+"../pages/ideal-solutions",
+"../pages/footer";
+
+
+#fixed-button-whatsapp {
+  @include flexbox-center;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 999;
+  border: 2px solid $yellow;
+  color: $yellow;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 1rem 2rem 1rem 1.5rem;
+  transition: all .2s ease-in-out;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  img {
+    width: 37px;
+    margin-right: 8px;
+    transition: all .2s ease-in-out;
+  }
+  &:hover {
+    background: transparent;
+    transition: all .4s ease-in-out;
+    animation: pulse 1.5s infinite;
+    img {
+      width: 40px;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 $yellow;
+  }
+  70% {
+    box-shadow: 0 0 0 10px #ae333300;
+  }
+  100% {
+    box-shadow: 0 0 0 0 #ae333300;
+  }
+}

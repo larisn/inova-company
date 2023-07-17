@@ -1,0 +1,92 @@
+
+html {
+  background-color: $light-title2;
+}
+
+main {
+  flex-grow: 1;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container-sent-message {
+  background-color: $dark-title;
+  width: 650px;
+  height: 400px;
+  margin: 10rem auto;
+  padding: 3rem;
+  @include responsive-tablet() {
+    width: 600px;
+    height: 400px;
+  }
+  @include responsive-mobile() {
+    width: 350px;
+    height: 400px;
+  }
+  h1 {
+    color: $light-title;
+    font-weight: 600;
+    font-size: 3.5rem;
+    text-align: center;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  h2 {
+    color: $light-title3;
+    font-weight: 400;
+    font-size: 1.8rem;
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 33px;
+  }
+  button {
+    border: 2px solid $yellow;
+    width: 200px;
+    font-size: 2rem;
+    background-color: $yellow;
+    padding: 1.3rem;
+    border-radius: 3px 6px 3px 6px;
+    margin: 4rem 0 6rem 18.5rem;
+    a {
+      color: $light-title;
+    }
+    &:hover {
+      background: transparent;
+      transition: all .4s ease-in-out;
+    }
+    @include responsive-tablet() {
+      margin-left: 16rem;
+    }
+    @include responsive-mobile() {
+      margin: 0;
+      margin-top: 2rem;
+    }
+  }
+}
+
+.container-footer {
+  max-width: 100%;
+  background-color: $dark-title;
+  padding: 2rem;
+  @include flexbox-center();
+  gap: 5px;
+  img {
+    width: 15px;
+  }
+  p {
+    color: $light-title;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  @include responsive-mobile() {
+    text-align: center;
+  }
+}
+
+footer {
+  background-color: $dark-title;
+}

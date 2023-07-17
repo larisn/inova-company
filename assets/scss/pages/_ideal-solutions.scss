@@ -1,0 +1,46 @@
+
+#s-ideal-solutions {
+  background: url(/assets/img/bg-solutions.png) no-repeat center / cover;
+  .container {
+    @include container();
+    text-align: center;
+    padding: 8rem 0 10rem 0;
+    h1 {
+      text-align: center;
+      color: $light-title;
+      font: 500 4.5rem $font-main;
+      line-height: 60px;
+      letter-spacing: .7px;
+      margin-bottom: 5rem;
+      @include responsive-tablet() {
+        font-size: 4rem;
+      }
+      @include responsive-mobile() {
+        font-size: 3rem;
+        line-height: 45px;
+      }
+    }
+    a {
+      color: $light-title;
+      cursor: pointer;
+      font: 500 1.6rem $font-secondary;
+      background-color: $dark-title;
+      border-radius: 3px 10px 3px 10px;
+      padding: 1.3rem 3rem;
+      transition: ease-out 0.3s;
+      &:hover {
+        color: $dark-title;
+        background-color: $light-title;
+      }
+    }
+    @include responsive-tablet() {
+      padding: 8rem 4rem 10rem 4rem;
+    }
+    @include responsive-mobile() {
+      padding: 8rem 2.5rem 10rem 2.5rem;
+    }
+    @include responsive-desktop() {
+      padding: 8rem 4rem 9rem 4rem;
+    }
+  }
+}
