@@ -37,19 +37,33 @@
 .content-footer-infos {
   @include flexbox-between();
   padding-top: 3rem;
+  @include responsive-mobile() {
+    flex-direction: column;
+    align-items: start;
+  }
   p {
     color: $light-title2;
     font: 300 1.3rem $font-secondary;
   }
   div {
     @include align-center();
+    
     gap: 15px;
     img {
       width: 20px;
       cursor: pointer;
       &:first-child {
         margin-left: 3rem;
+        @include responsive-tablet() {
+          margin-left: 0;
+        }
       }
+    }
+  }
+  div:nth-child(2) {
+    @include responsive-mobile() {
+      flex-direction: column;
+      align-items: start;
     }
   }
 }

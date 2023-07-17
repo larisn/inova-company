@@ -15,8 +15,11 @@
       padding: 11rem 10rem 13rem 4rem;
     }
   }
-  img {
+  .img-contact {
     width: 550px;
+    @include responsive-tablet() {
+      display: none;
+    }
   }
 }
 
@@ -115,6 +118,7 @@ form {
     justify-content: start;
     gap: 10px;
     img {
+      width: 22px;
       transform: translateY(1px);
     }
   }
