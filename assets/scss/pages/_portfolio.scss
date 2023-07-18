@@ -1,5 +1,6 @@
 
 #s-portfolio {
+  background-color: $light-title;
   .container {
     @include container();
     padding: 8rem 0 10rem 0;

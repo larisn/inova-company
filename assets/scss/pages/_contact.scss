@@ -1,5 +1,6 @@
 
 #s-contact {
+  background-color: $light-title;
   .container {
     @include container();
     @include flexbox-between();
