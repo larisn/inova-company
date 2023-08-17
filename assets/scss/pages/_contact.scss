@@ -1,6 +1,7 @@
 
 #s-contact {
-  background-color: $light-title;
+  background: url(/assets/img/bg-secondary.png) no-repeat center 10% / cover;
+  height: 100%;
   .container {
     @include container();
     @include flexbox-between();
@@ -32,8 +33,8 @@
     letter-spacing: 1px;
   }
   h1 {
-    color: $dark-title;
-    font: 700 4.5rem $font-main;
+    color: $light-title;
+    font: 600 4.5rem $font-main;
     line-height: 70px;
     max-width: 550px;
     margin-bottom: 1.5rem;
@@ -47,8 +48,8 @@
     }
   }
   p {
-    color: $dark-description;
-    font: 500 1.8rem $font-secondary;
+    color: $light-p;
+    font: 400 1.8rem $font-secondary;
     line-height: 32px;
     margin-bottom: 6rem;
     max-width: 600px;
@@ -59,7 +60,7 @@
   }
 }
 
-form {
+.form-contact {
   ul {
     margin: 0 auto;
     div:not(.button-submit) {
@@ -78,13 +79,14 @@ form {
       outline: none;
       caret-color: $yellow;
       font-weight: 500;
-      color: $dark-title;
+      color: $light-title;
       @include responsive-mobile() {
         width: 100%;
       }
       &::placeholder {
-        color: $dark-p;
+        color: $light-p;
         font-weight: 400;
+        text-align: left;
         padding: 5px;
       }
       &:focus {
@@ -123,19 +125,10 @@ form {
       transform: translateY(1px);
     }
   }
-  .arrow-white {
-    display: none;
-  }
   &:hover {
-    color: $light-title;
-    border: 1px solid $dark-title;
-    background-color: $dark-title;
-    .arrow-white {
-      display: block;
-    }
-    .arrow-black {
-      display: none;
-    }
+    color: $dark-title;
+    border: 1px solid $light-title;
+    background-color: $light-title;
   }
 }
 

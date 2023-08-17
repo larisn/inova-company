@@ -5,21 +5,20 @@ header {
   right: 0;
   background-color: transparent;
   transition: background-color 0.3s ease-in-out;
-  padding: 1.8rem 2.2rem;
+  padding: 1rem 2.2rem;
   .container {
     nav {
-      @include container();
+      max-width: 1670px;
       @include flexbox-between();
       .nav-list {
         display: flex;
         gap: 25px;
         li {
           a {
-            color: $light-title;
+            color: $dark-title;
             position: relative;
-            font-size: 1.7rem;
-            font-weight: 300;
-            transition: all .3s ease-in-out;
+            font-size: 1.6rem;
+            font-weight: 500;
             &:hover {
               color: $yellow;
             }
@@ -62,7 +61,7 @@ header {
     margin: 6px 0;
     width: 28px;
     height: 2px;
-    background-color: $light-title;
+    background-color: $dark-title;
     transition: .4s;
   }
   &.active .line1 {
@@ -94,12 +93,15 @@ header {
     width: 100vw;
     height: 100vh;
     z-index: 999;
-    background-color: $dark-title;
+    background-color: $light-title;
     flex-direction: column;
     padding-top: 40px;
     visibility: hidden;
     li {
       margin-bottom: 1rem;
+      a {
+        transition: none;
+      }
     }
   }
   .nav-mobile {
@@ -108,7 +110,7 @@ header {
 }
 
 .solid-nav {
-  background-color: $dark-title;
+  background-color: $light-bar;
   z-index: 999;
 }
 
@@ -126,6 +128,6 @@ header {
   }
   &:hover {
     color: $light-title;
-    background-color: $light-title2;
+    background-color: $dark-title;
   }
 }

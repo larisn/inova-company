@@ -17,6 +17,10 @@
 "../pages/footer";
 
 
+body {
+  background-color: $light-title;
+}
+
 #fixed-button-whatsapp {
   @include flexbox-center;
   position: fixed;

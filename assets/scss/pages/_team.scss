@@ -69,8 +69,14 @@
   align-items: baseline;
   gap: 35px;
   img {
-    width: 100%;
+    width: 400px;
+    height: 350px;
     margin-top: 3.5rem;
+    border-radius: 8px;
+    @include responsive-tablet() {
+      width: 400px;
+      height: 430px;
+    }
   }
   span {
     color: $light-p;

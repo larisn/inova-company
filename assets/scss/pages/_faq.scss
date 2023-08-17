@@ -63,7 +63,11 @@
     border: 1px solid $yellow2
   }
   div {
+    &:nth-child(1), .icon {
+      align-items: center;
+    }
     @include flexbox-between();
+    align-items: start;
     gap: 20px;
   }
   img {
@@ -80,15 +84,21 @@
     font: 400 1.4rem $font-secondary;
     max-width: 600px;
     line-height: 30px;
-    margin-bottom: 1rem;
-    padding: 3.5rem 0 2.5rem 0;
+    padding-bottom: 1rem;
   }
 }
 
-.container-questions .answer {
+.answer {
   max-height: 0;
-  overflow: hidden;
   transition: max-height 0.3s ease;
+  overflow-y: hidden;
+  a {
+    color: $yellow;
+    font: 400 1.4rem $font-secondary;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .icon {

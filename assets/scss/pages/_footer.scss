@@ -1,6 +1,6 @@
 
 #s-footer {
-  background-color: $dark-title;
+  background-color: $light-title;
   .container {
     @include container();
     padding-top: 1.5rem;
@@ -15,10 +15,10 @@
     gap: 35px;
     li {
       a {
-        color: $light-title;
+        color: $dark-title;
         position: relative;
         font-size: 1.6rem;
-        font-weight: 300;
+        font-weight: 500;
         transition: all .3s ease-in-out;
         &:hover {
           color: $yellow;
@@ -42,13 +42,11 @@
     align-items: start;
   }
   p {
-    color: $light-title2;
-    font: 300 1.3rem $font-secondary;
+    color: $dark-title;
+    font: 500 1.3rem $font-secondary;
   }
   div {
     @include align-center();
-    
-    gap: 15px;
     img {
       width: 20px;
       cursor: pointer;
