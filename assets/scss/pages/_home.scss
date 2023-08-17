@@ -3,7 +3,7 @@
   background: url(/assets/img/bg-home.png) no-repeat center 10% / cover;
   height: 100%;
   @include responsive-tablet {
-    background: url(/assets/img/bg-home.png) no-repeat center right 25% / cover;
+    background: url(/assets/img/bg-home.png) no-repeat center right 80% / cover;
     height: 85%;
   }
   @include responsive-mobile() {
