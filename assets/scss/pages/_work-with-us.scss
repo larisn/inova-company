@@ -4,10 +4,10 @@
     @include container();
     padding: 8rem 0 10rem 0;
     @include responsive-tablet() {
-      padding: 8rem 4rem 10rem 4rem;
+      padding: 0 4rem 10rem 4rem;
     }
     @include responsive-mobile() {
-      padding: 8rem 2.5rem 8rem 2.5rem;
+      padding: 0 2.5rem 8rem 2.5rem;
     }
     @include responsive-desktop() {
       padding: 11rem 6rem 12rem 6rem;
@@ -116,6 +116,9 @@ label {
   img {
     width: 20px;
   }
+  @include responsive-mobile() {
+    width: 100%;
+  }
 }
 
 .container-content-work {
@@ -129,6 +132,9 @@ label {
 
 .img-work {
   width: 600px;
+  @include responsive-tablet() {
+    display: none;
+  }
 }
 .container-button-submit-work {
   color: $dark-title;
@@ -146,5 +152,8 @@ label {
     color: $light-title;
     border: 1px solid $dark-title;
     background-color: $dark-title;
+  }
+  @include responsive-mobile() {
+    width: 100%;
   }
 }

@@ -34,16 +34,27 @@
   }
 }
 
+.mail-contact {
+  margin-left: 15px;
+  @include responsive-mobile() {
+    margin-left: 0;
+  }
+}
+
 .content-footer-infos {
   @include flexbox-between();
   padding-top: 3rem;
   @include responsive-mobile() {
     flex-direction: column;
     align-items: start;
+    gap: 8px;
   }
   p {
     color: $dark-title;
     font: 500 1.3rem $font-secondary;
+    @include responsive-mobile() {
+      margin-bottom: .8rem;
+    }
   }
   div {
     @include align-center();
